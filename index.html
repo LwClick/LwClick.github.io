@@ -125,9 +125,9 @@
 
 <meta name="description" content="change the world by code">
 <meta property="og:type" content="website">
-<meta property="og:title" content="LwClick">
+<meta property="og:title" content="绝对领域">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="LwClick">
+<meta property="og:site_name" content="绝对领域">
 <meta property="og:description" content="change the world by code">
 <meta property="article:author" content="Liu Wei">
 <meta name="twitter:card" content="summary">
@@ -166,7 +166,7 @@
 
 
 
-  <title>LwClick</title>
+  <title>绝对领域</title>
   
 
 
@@ -197,12 +197,12 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">LwClick</span>
+        <span class="site-title">绝对领域</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">Hello World.</p>
+        <p class="site-subtitle">lwclick</p>
       
   </div>
 
@@ -293,7 +293,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -418,8 +418,7 @@
 
       
         
-          
-            <h3 id="一、关系数据库概述"><a href="#一、关系数据库概述" class="headerlink" title="一、关系数据库概述"></a>一、关系数据库概述</h3><h4 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h4><ul>
+          <h3 id="一、关系数据库概述"><a href="#一、关系数据库概述" class="headerlink" title="一、关系数据库概述"></a>一、关系数据库概述</h3><h4 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h4><ul>
 <li>层次模型（树状）</li>
 <li>网状模型</li>
 <li><strong>关系模型（二维表格）</strong></li>
@@ -438,271 +437,13 @@
 <li>TIME</li>
 <li>DATETIME</li>
 </ol>
-<h4 id="SQL-Structured-Query-Language"><a href="#SQL-Structured-Query-Language" class="headerlink" title="SQL (Structured Query Language)"></a>SQL (Structured Query Language)</h4><ol>
-<li>Oracle把自己扩展的SQL称为 <strong>PL/SQL</strong></li>
-<li><strong>DDL(Data Definition Language)</strong>：创建、删除、修改表结构                   <em>数据库管理员</em></li>
-<li><strong>DML(Data Manipulation Language)</strong>: 添加、删除、更新数据的能力      <em>应用程序对数据库的操作</em></li>
-<li><strong>DQL(Data Query Language)</strong>: 用户查询数据                                                <em>用户</em></li>
-</ol>
-<h4 id="CRUD：Create、Retrieve、Update、Delete"><a href="#CRUD：Create、Retrieve、Update、Delete" class="headerlink" title="CRUD：Create、Retrieve、Update、Delete"></a>CRUD：Create、Retrieve、Update、Delete</h4><h4 id="良好习惯"><a href="#良好习惯" class="headerlink" title="良好习惯"></a>良好习惯</h4><p><strong>SQL关键字总是大写，表名和列名均使用小写。</strong></p>
-<hr>
-<h3 id="二、关系模型"><a href="#二、关系模型" class="headerlink" title="二、关系模型"></a>二、关系模型</h3><ol>
-<li><strong>记录</strong>：表的每一行</li>
-<li><strong>字段</strong>：表的每一列（字段应该避免允许为NULL）</li>
-</ol>
-<h4 id="主键"><a href="#主键" class="headerlink" title="主键"></a>主键</h4><ol>
-<li><p><strong>定义</strong>：能够唯一标识一条记录的某个字段</p>
-</li>
-<li><p><strong>基本原则</strong>：不使用任何业务相关的字段作为主键，一般使用<strong>id</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INT NOT NULL AUTO_INCREMENT</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h4 id="联合主键（不常用）"><a href="#联合主键（不常用）" class="headerlink" title="联合主键（不常用）"></a>联合主键（不常用）</h4><p>通过多个字段唯一标识记录，允许一列有重复，只要不是所有主键列都重复即可</p>
-<img src="https://gitee.com/lwclick/blogImg/raw/master/img/A395E4275EB52FC7CA4D380EAE35B825.png" alt="A395E4275EB52FC7CA4D380EAE35B825" style="zoom:80%;" />
-
-
-
-<h4 id="外键（也可以不设置约束，仅依靠应用程序的逻辑来保证）"><a href="#外键（也可以不设置约束，仅依靠应用程序的逻辑来保证）" class="headerlink" title="外键（也可以不设置约束，仅依靠应用程序的逻辑来保证）"></a>外键（也可以不设置约束，仅依靠应用程序的逻辑来保证）</h4><ol>
-<li><p><strong>一对多关系</strong>（一个班级对应多名学生）</p>
-<p>在 <strong>多</strong> 的表里首先添加一个字段</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">创建外键约束：</span><br><span class="line">    ALTER TABLE 多的表名</span><br><span class="line">    ADD CONSTRAINT 外键约束名</span><br><span class="line">    FOREIGN KEY (作为外键的字段)</span><br><span class="line">    REFERENCES 一的表名 (主键);</span><br><span class="line">删除外键约束：</span><br><span class="line">	ALTER TABLE students</span><br><span class="line">	DROP FOREIGN KEY fk_class_id;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p><strong>多对多关系</strong>（一个老师对应多个班级，一个班级对应多个老师）</p>
-<p>创建一个中间表（<em>建立两个一对多的关系</em>）</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">teachers表：</span><br><span class="line">	id   name</span><br><span class="line">classes表：</span><br><span class="line">	id   name</span><br><span class="line">teacher_classes表：</span><br><span class="line">	id   teacher_id    class_id</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li><p><strong>一对一关系</strong>（一个表的记录对应到另一个表的唯一一个记录，一个学生对应一个电话号码）</p>
-<p>用于将<strong>常读取</strong>和<strong>不常读取</strong>字段分开，提高查询速度</p>
-</li>
-</ol>
-<h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>关系数据库中对某一列或多个列的值进行<strong>预排序</strong>的数据结构</p>
-<p>值越不相同，索引效率越高</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建索引：</span><br><span class="line">	ALTER TABLE students</span><br><span class="line">	ADD INDEX 索引名称 (需要创建索引的列);</span><br></pre></td></tr></table></figure>
-
-<p><strong>唯一索引</strong>：不宜作为主键，但具有唯一性约束</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">唯一索引：</span><br><span class="line">	ALTER TABLE students</span><br><span class="line">	ADD UNIQUE INDEX 唯一索引名称 (建立唯一索引的列);</span><br><span class="line">唯一约束：</span><br><span class="line">	ALTER TABLE students</span><br><span class="line">	ADD CONSTRAINT 唯一约束的名称 UNIQUE (建立唯一约束的列);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="三、查询数据"><a href="#三、查询数据" class="headerlink" title="三、查询数据"></a>三、查询数据</h3><h4 id="准备数据"><a href="#准备数据" class="headerlink" title="准备数据"></a>准备数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">classes表：</span><br><span class="line">    CREATE TABLE classes (</span><br><span class="line">    id BIGINT NOT NULL AUTO_INCREMENT,</span><br><span class="line">    name VARCHAR(100) NOT NULL,</span><br><span class="line">    PRIMARY KEY (id)</span><br><span class="line">    ) ENGINE&#x3D;InnoDB DEFAULT CHARSET&#x3D;utf8;</span><br><span class="line">students表：</span><br><span class="line">	CREATE TABLE students(</span><br><span class="line">    id INT NOT NULL AUTO_INCREMENT,</span><br><span class="line">    class_id INT NOT NULL,</span><br><span class="line">    name VARCHAR(10) NOT NULL, </span><br><span class="line">    gender VARCHAR(1) NOT NULL,</span><br><span class="line">    scoure INT NOT NULL,</span><br><span class="line">    PRIMARY KEY(id)</span><br><span class="line">    ) ENGINE&#x3D;INNODB DEFAULT CHARSET&#x3D;UTF8;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="基本查询"><a href="#基本查询" class="headerlink" title="基本查询"></a>基本查询</h4><ol>
-<li><p>查询所有</p>
-<pre><code>**SELECT * FROM students;**</code></pre></li>
-<li><p>测试数据库连接</p>
-<pre><code>**SELECT 1;**</code></pre></li>
-</ol>
-<h4 id="条件查询"><a href="#条件查询" class="headerlink" title="条件查询"></a>条件查询</h4><ol>
-<li><p>获取成绩在80分以上的</p>
-<pre><code>**SELECT * FROM students WHERE score &gt;= 80;**</code></pre></li>
-<li><p>获取成绩在80分以上且是“男生”</p>
-<pre><code>**SELECT * FROM students WHERE score &gt;= 80 AND gender = &apos;M&apos;**</code></pre></li>
-<li><p>获取成绩在80分以上或者是“男生”</p>
-<pre><code>**SELECT * FROM students WHERE score &gt;= 80 OR gender = &apos;M&apos;**</code></pre></li>
-<li><p>获取班级不为1的</p>
-<pre><code>**SELECT * FROM students WHERE class_id &lt;&gt; 1;**</code></pre></li>
-<li><p>获取分数在80以下或者90以上，并且是男生</p>
-<pre><code>**SELECT * FROM students WHERE (score &lt; 80 OR score &gt; 90) AND gender = &apos;M&apos;;**</code></pre></li>
-<li><p>获取名字带“王”的<strong>（LIKE  ‘%王’）</strong></p>
-<pre><code>**SELECT * FROM students WHERE name LIKE &quot;%王%&quot;;**</code></pre></li>
-</ol>
-<h4 id="投影查询"><a href="#投影查询" class="headerlink" title="投影查询"></a>投影查询</h4><ol>
-<li><p>获取指定列并将name列改为stuName</p>
-<pre><code>**SELECT id, name stuName, score FROM students;**</code></pre></li>
-<li><p>获取指定列，且是男生</p>
-<pre><code>**SELECT id, name stuName, score FROM students WHERE gender = &apos;M&apos;;**</code></pre></li>
-</ol>
-<h4 id="排序（默认按照主键排序）"><a href="#排序（默认按照主键排序）" class="headerlink" title="排序（默认按照主键排序）"></a>排序（默认按照主键排序）</h4><ol>
-<li><p>根据成绩排序（默认从低到高 <strong>ORDER BY</strong>）</p>
-<p> <strong>SELECT * FROM students ORDER BY score;</strong></p>
-</li>
-<li><p>根据成绩排序（从高到低）</p>
-<p> <strong>SELECT id, name, score FROM students ORDER BY score DESC;</strong></p>
-</li>
-<li><p>先根据成绩升序排列，如果成绩有相同的，再按性别降序排列排序</p>
-<p> <strong>SELECT id, name, gender, score FROM students ORDER BY score ASC,  gender DESC;</strong></p>
-</li>
-<li><p>查询一班的学生成绩，并按照倒序排列</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT id, name, gender, score</span><br><span class="line">FROM students</span><br><span class="line">WHERE class_id &#x3D; 1</span><br><span class="line">ORDER BY score DESC;</span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ol>
-<h4 id="分页查询"><a href="#分页查询" class="headerlink" title="分页查询"></a>分页查询</h4><ol>
-<li><p>查询学生的成绩，分页显示，从第1条显示，每页最多显示3条(<strong>LIMIT 3 OFFSET 0;</strong>)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT id, name, gender, score</span><br><span class="line">FROM students</span><br><span class="line">ORDER BY score DESC</span><br><span class="line">LIMIT 3 OFFSET 0;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>每页的开始<strong>OFFSET = 每页要显示的条数 * （当前页码 - 1）</strong></p>
-</li>
-</ol>
-<h5 id="从-OFFSET-条开始显示，每页有-LIMIT-条"><a href="#从-OFFSET-条开始显示，每页有-LIMIT-条" class="headerlink" title="从 OFFSET 条开始显示，每页有 LIMIT 条"></a>从 <strong><em>OFFSET</em></strong> 条开始显示，每页有 <strong><em>LIMIT</em></strong> 条</h5><h4 id="聚合查询"><a href="#聚合查询" class="headerlink" title="聚合查询"></a>聚合查询</h4><ol>
-<li><p>查询表中共有多少行数据，以num显示</p>
-<pre><code>**SELECT COUNT(*) num FROM students;**</code></pre></li>
-<li><p>查询有多少男生</p>
-<pre><code>**SELECT COUNT(id) boys FROM students WHERE gender = &apos;M&apos;;**</code></pre></li>
-<li><p>其他聚合函数</p>
-</li>
-</ol>
-<p><img src="https://gitee.com/lwclick/blogImg/raw/master/img/EC4CA9781B509E9B97746412D513B6F6.png" alt="EC4CA9781B509E9B97746412D513B6F6"></p>
-<ol start="4">
-<li><p>使用AVG查询男生的平均成绩（<strong>聚合查询使用WHERE条件</strong>）</p>
-<pre><code>**SELECT AVG(score) average FROM students WHERE gender = &apos;M&apos;;**</code></pre></li>
-<li><p>每页3条记录，通过聚合查询获得总页数</p>
-<pre><code>**SELECT CEILING(COUNT(*) / 3) FROM students;**</code></pre></li>
-</ol>
-<h5 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h5><ol>
-<li><p>查询每个班级的人数</p>
-<pre><code>**SELECT class_id, COUNT(*) num FROM students GROUP BY class_id;**</code></pre></li>
-<li><p>每个班级的平均分</p>
-<pre><code>**SELECT class_id, AVG(score) ave FROM students GROUP BY class_id;**</code></pre></li>
-<li><p>每个班级男生女生的平均分，降序排列</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT class_id, gender, AVG(score) ave </span><br><span class="line">FROM students </span><br><span class="line">GROUP BY class_id, gender</span><br><span class="line">ORDER BY ave DESC;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<h4 id="多表查询-慎用"><a href="#多表查询-慎用" class="headerlink" title="多表查询(慎用)"></a>多表查询(慎用)</h4><ol>
-<li><p>查询两个表中的属性（笛卡尔积）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	s.id sid,</span><br><span class="line">	s.name sname,</span><br><span class="line">	s.score,</span><br><span class="line">	c.name cname</span><br><span class="line">FROM students s, classes c</span><br><span class="line">WHERE s.gender &#x3D; &#39;M&#39; AND c.id &#x3D; 1;</span><br></pre></td></tr></table></figure>
-
-
-
-
-</li>
-</ol>
-<h4 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h4><p><strong><em>先确定一个主表作为结果集，然后，把其他表的行有选择性地“连接”在主表结果集上</em></strong></p>
-<h6 id="1-内连接（INNER-JOIN）-—-只返回同时存在于两张表的行数据"><a href="#1-内连接（INNER-JOIN）-—-只返回同时存在于两张表的行数据" class="headerlink" title="1.内连接（INNER JOIN） —  只返回同时存在于两张表的行数据"></a>1.内连接（INNER JOIN） —  只返回同时存在于两张表的行数据</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1&gt; 先确定主表                    FROM 表1</span><br><span class="line">2&gt; 再确定需要连接的表             INNER JOIN &lt;表2&gt;</span><br><span class="line">3&gt; 确定连接条件                   ON &lt;条件。。。&gt;</span><br><span class="line">4&gt; 根据情况再加WHERE 或者 ORDER BY</span><br><span class="line">	SELECT ... </span><br><span class="line">	FROM &lt;表1&gt; </span><br><span class="line">	INNER JOIN &lt;表2&gt; </span><br><span class="line">	ON &lt;条件...&gt;</span><br></pre></td></tr></table></figure>
-
-<p>查询所有学生，同时返回班级名称</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SELECT s.id, s.name, c.name class_name, s.gender, s.score</span><br><span class="line">FROM students s</span><br><span class="line">INNER JOIN classes c</span><br><span class="line">ON s.class_id &#x3D; c.id;</span><br></pre></td></tr></table></figure>
-
-<h6 id="2-外连接（OUTER-JOIN）"><a href="#2-外连接（OUTER-JOIN）" class="headerlink" title="2.外连接（OUTER JOIN）"></a>2.外连接（OUTER JOIN）</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">右外连接： ---  返回右表都存在的行，若一行仅在右表有，那么以 NULL 填充剩余字段</span><br><span class="line">	SELECT s.id, s.name, c.name class_name, s.gender, s.score</span><br><span class="line">    FROM students s</span><br><span class="line">    RIGHT OUTER JOIN classes c</span><br><span class="line">    ON s.class_id &#x3D; c.id;</span><br><span class="line">左外连接： ---  返回左表都存在的行</span><br><span class="line"></span><br><span class="line">全外连接： ---  把两张表的所有记录全部选择出来，并且，自动把对方不存在的列填充为NULL</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="四、修改数据"><a href="#四、修改数据" class="headerlink" title="四、修改数据"></a>四、修改数据</h3><h4 id="INSERT"><a href="#INSERT" class="headerlink" title="INSERT"></a>INSERT</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO &lt;表名&gt; (字段1, 字段2, ...) VALUES (值1, 值2, ...);</span><br></pre></td></tr></table></figure>
-
-<p>向学生表中插入数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO students (class_id, name, gender, score) </span><br><span class="line">VALUES</span><br><span class="line">  (1, &#39;大宝&#39;, &#39;M&#39;, 87),</span><br><span class="line">  (2, &#39;二宝&#39;, &#39;M&#39;, 81);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="UPDATE"><a href="#UPDATE" class="headerlink" title="UPDATE"></a>UPDATE</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UPDATE &lt;表名&gt; SET 字段1&#x3D;值1, 字段2&#x3D;值2, ... WHERE ...;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>更新id为1的学生的信息</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UPDATE students </span><br><span class="line">SET name&#x3D;&#39;大牛&#39;, score&#x3D;66 </span><br><span class="line">WHERE id&#x3D;1;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><p>把所有60分以下的同学的成绩加10分</p>
-</li>
-<li><pre><code>UPDATE students 
-SET score=score+10 
-WHERE score&lt;80;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   可以根据返回受影响行数判断是否更新成功</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### DELETE</span><br></pre></td></tr></table></figure>
-DELETE FROM &lt;表名&gt; WHERE ...;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">1. 删除id&#x3D;5，6，7的记录</span><br></pre></td></tr></table></figure>
-DELETE FROM students 
-WHERE id&gt;=5 AND id&lt;=7;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 删除id&#x3D;1，4，9的记录</span><br></pre></td></tr></table></figure>
-DELETE FROM students 
-WHERE id IN (1, 4, 9);
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 五、MySQL</span><br><span class="line"></span><br><span class="line">命令行程序 **mysql **实际上是MySQL客户端，真正的MySQL服务器程序是 **mysqld** ，在后台运行。</span><br><span class="line"></span><br><span class="line">#### **命令行的方式运行，一般用于SSH操作远程服务器，注意语句后面加 ；**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 数据库管理</span><br><span class="line"></span><br><span class="line">1. 创建数据库</span><br></pre></td></tr></table></figure>
-CREATE DATABASE test;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 删除数据库</span><br></pre></td></tr></table></figure>
-DROP DATABASE test;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 切换到某一个数据库</span><br></pre></td></tr></table></figure>
-USE test;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 查看所有数据库</span><br></pre></td></tr></table></figure>
-SHOW DATABASES;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 数据表管理</span><br><span class="line"></span><br><span class="line">1. 列出数据库的所有表</span><br></pre></td></tr></table></figure>
-SHOW TABLES;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 查看一个表的结构</span><br></pre></td></tr></table></figure>
-DESC students;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. **查看创建表的SQL语句**</span><br></pre></td></tr></table></figure>
-SHOW CREATE TABLE students;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 删除表</span><br></pre></td></tr></table></figure>
-DROP TABLE students;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 给students表新增一列birth</span><br></pre></td></tr></table></figure>
-ALTER TABLE students ADD COLUMN birth VARCHAR(10) NOT NULL;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6. 修改birth列名为birthday</span><br></pre></td></tr></table></figure>
-ALTER TABLE students CHANGE COLUMN birth birthday VARCHAR(20) NOT NULL;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">7. 删除列</span><br></pre></td></tr></table></figure>
-ALTER TABLE students DROP COLUMN birthday;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### 实用SQL语句</span><br><span class="line"></span><br><span class="line">1. **插入或替换（REPLACE）**  ---   不存在则插入，存在则删除再插入</span><br></pre></td></tr></table></figure>
-REPLACE INTO students 
-VALUES (1, 1, &apos;小明&apos;, &apos;F&apos;, 99);
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. **插入或更新（INSERT INTO ... ON DUPLICATE KEY UPDATE ...）**  ---   不存在则插入，存在则更新</span><br></pre></td></tr></table></figure>
-INSERT INTO students 
-VALUES (1, 1, &apos;小明&apos;, &apos;F&apos;, 99) 
-ON DUPLICATE KEY UPDATE name=&apos;小明&apos;, gender=&apos;F&apos;, score=99;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. **插入或忽略（INSERT IGNORE INTO...）**</span><br></pre></td></tr></table></figure>
-INSERT IGNORE INTO students 
-VALUES (1, 1, &apos;小明&apos;, &apos;F&apos;, 99);
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. **快照**</span><br></pre></td></tr></table></figure>
-CREATE TABLE students_of_class1 
-SELECT * FROM students 
-WHERE class_id=1;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. **将查询结果集写入表中**</span><br></pre></td></tr></table></figure>
-创建结果集表：
- CREATE TABLE statistics (
- id BIGINT NOT NULL AUTO_INCREMENT,
- class_id BIGINT NOT NULL,
- average DOUBLE NOT NULL,
- PRIMARY KEY (id)
- );
-插入数据：
- INSERT INTO statistics (class_id, average) 
- SELECT class_id, AVG(score) 
- FROM students 
- GROUP BY class_id;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6. **强制使用索引（索引必须存在）**</span><br></pre></td></tr></table></figure>
-SELECT * FROM students 
-FORCE INDEX (idx_class_id) 
-WHERE class_id = 1 
-ORDER BY id DESC;
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 六、事务管理</span><br><span class="line"></span><br><span class="line">#### 事务</span><br><span class="line"></span><br><span class="line">1. 数据库事务：把多条语句作为一个整体进行操作的功能</span><br><span class="line"></span><br><span class="line">2. ACID特性：</span><br><span class="line">   1. **A：Atomic，原子性**，要么全部执行，要么全部不执行；</span><br><span class="line">   2. **C：Consistent，一致性**，事务完成后，所有数据的状态都是一致的</span><br><span class="line">   3. **I：Isolation，隔离性**，如果有多个事务并发执行，每个事务作出的修改必须与其他事务隔离</span><br><span class="line">   4. **D：Duration，持久性**，即事务完成后，对数据库数据的修改被持久化存储</span><br><span class="line"></span><br><span class="line">3. 隐式事务：单条SQL语句，数据库系统自动将其作为一个事务执行</span><br><span class="line"></span><br><span class="line">4. 显式事务：</span><br><span class="line"></span><br><span class="line">   1. 开启事务： **BEGIN；**</span><br><span class="line"></span><br><span class="line">   2. 提交数据： **COMMIT；**</span><br><span class="line"></span><br><span class="line">   3. 回滚事务： **ROLLBACK；**</span><br><span class="line"></span><br><span class="line">   4. 设置事务的隔离级别：**SET TRANSACTION ISOLATION LEVEL 级别**</span><br></pre></td></tr></table></figure>
-   BEGIN;
-   UPDATE accounts SET balance = balance - 100 WHERE id = 1;
-   UPDATE accounts SET balance = balance + 100 WHERE id = 2;
-   ROLLBACK;</code></pre></li>
-</ol>
-<h4 id="隔离级别（从低到高）"><a href="#隔离级别（从低到高）" class="headerlink" title="隔离级别（从低到高）"></a>隔离级别（从低到高）</h4><ol>
-<li><p><strong>Read Uncommitted</strong></p>
-<p><em>事务A</em> 会读到 <em>事务B</em> 更新后但未提交的数据</p>
-<p><strong>脏读</strong>：<em>事务B</em> 回滚，那么 <em>事务A</em> 读到的数据就是脏数据（和上一次读到的数据不一致）</p>
-</li>
-<li><p><strong>Read Committed</strong></p>
-<p>一个事务可能会遇到不可重复读（Non Repeatable Read）的问题</p>
-<p><strong>不可重复读</strong>：在事务A内，多次读同一数据，若在这个事务没结束前，事务B恰好修改了这个数据，那么事务A中，两次读取的数据可能就不一致</p>
-</li>
-<li><p><strong>Repeatable Read</strong></p>
-<p>事务可能会遇到幻读（Phantom Read）的问题</p>
-<p><strong>幻读</strong>：在一个事务中，第一次查询某条记录，没有</p>
-<pre><code>但是，当试图更新这条不存在的记录时，竟然能成功
-
-并且，再次读取同一条记录，它就神奇地出现了</code></pre></li>
-<li><p><strong>Serializable</strong></p>
-<p>最严格的隔离级别，所有事务按照次序依次执行</p>
-</li>
-<li><p><strong>MySQL中，如果使用InnoDB，默认的隔离级别是Repeatable Read</strong></p>
-</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/mysql_00_SQL%E5%9F%BA%E7%A1%80/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -758,7 +499,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -883,67 +624,22 @@ ORDER BY id DESC;
 
       
         
-          
-            <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h4 id="1-Throwable类"><a href="#1-Throwable类" class="headerlink" title="1. Throwable类"></a>1. Throwable类</h4><p>所有异常的超类，出现Exception代表程序有异常，可以进行处理</p>
+          <h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h4 id="1-Throwable类"><a href="#1-Throwable类" class="headerlink" title="1. Throwable类"></a>1. Throwable类</h4><p>所有异常的超类，出现Exception代表程序有异常，可以进行处理</p>
 <p><strong>常用方法：</strong></p>
 <ul>
-<li><p>Throwable()； 构造方法，Throwable类对象中，存储的异常或者错误信息为<strong>null</strong></p>
-</li>
-<li><p>Throwable(String message);   Throwable类对象中，存储的异常或者错误信息为<strong>message</strong></p>
-</li>
-<li><p>String getMessage();  获取Throwable对象中存储的<strong>异常或者错误信息</strong></p>
-</li>
-<li><p>String toString();  返回当前异常或者错误的<strong>简要描述</strong></p>
-</li>
-<li><p>void printStackTrace();  <strong>展示错误的前因后果</strong>，【红色字体】</p>
-</li>
+<li>Throwable()； 构造方法，Throwable类对象中，存储的异常或者错误信息为<strong>null</strong></li>
+<li>Throwable(String message);   Throwable类对象中，存储的异常或者错误信息为<strong>message</strong></li>
+<li>String getMessage();  获取Throwable对象中存储的<strong>异常或者错误信息</strong></li>
+<li>String toString();  返回当前异常或者错误的<strong>简要描述</strong></li>
+<li>void printStackTrace();  <strong>展示错误的前因后果</strong>，【红色字体】</li>
 </ul>
-<h4 id="2-异常处理"><a href="#2-异常处理" class="headerlink" title="2. 异常处理"></a>2. 异常处理</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">try &#123;</span><br><span class="line">    &#x2F;&#x2F; 有可能出现异常代码</span><br><span class="line">&#125; catch ( &#x2F;* 对应处理的异常对象 *&#x2F; ) &#123;</span><br><span class="line">	&#x2F;&#x2F; 处理方式</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>特征：</strong></p>
-<ul>
-<li>代码中从异常<strong>发生位置开始</strong>，<strong>之后</strong>的代码都<strong>不再运行</strong></li>
-<li>代码中有<strong>多个异常</strong>，可以使用<strong>多个catch</strong>块进行捕获操作，<strong>分门别类处理</strong></li>
-<li>当前情况下，只能展示异常情况，后期可以将异常情况做成<strong>log日志文件</strong></li>
-<li>异常被捕获之后代码可以正常运行</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">    	test(10, 2, null);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void test(int num1, int num2, int[] arr) &#123;</span><br><span class="line">    int ret &#x3D; 0;</span><br><span class="line">    try &#123;</span><br><span class="line">        ret &#x3D; num1 &#x2F; num2;</span><br><span class="line">        System.out.println(&quot;测试代码&quot;);</span><br><span class="line">        arr[0] &#x3D; 10;                      【异常】</span><br><span class="line">    &#125; catch (ArithmeticException e) &#123;</span><br><span class="line">    	e.printStackTrace();              【输出异常信息】</span><br><span class="line">    &#125; catch (NullPointerException e) &#123;</span><br><span class="line">    	e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(&quot;ret:&quot; + ret);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-抛出异常"><a href="#3-抛出异常" class="headerlink" title="3. 抛出异常"></a>3. 抛出异常</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">throw</span><br><span class="line">	在方法内抛出异常</span><br><span class="line">	</span><br><span class="line">throws</span><br><span class="line">	在【方法声明】位置，告知调用者当前方法有哪些异常抛出</span><br></pre></td></tr></table></figure>
-
-<p><strong>特征：</strong></p>
-<ul>
-<li>一个代码块内，<strong>有且只能抛出一个</strong>异常</li>
-<li>从<strong>throw</strong>位置开始，之后的代码不在运行</li>
-<li>代码中存在使用throw抛出异常，在方法的【声明位置】必须告知调用者这里有什么异常</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 调用带有异常抛出的方法，如果选择【 继续抛出 】需要在当前方法的声明位置</span><br><span class="line">public static void main(String[] args) throws NullPointerException, ArithmeticException &#123;</span><br><span class="line">    &#x2F;&#x2F; 调用一个带有异常抛出的方法</span><br><span class="line">    &#x2F;&#x2F; 捕获处理</span><br><span class="line">    try &#123;</span><br><span class="line">        test(10, 2, null);</span><br><span class="line">    &#125; catch (ArithmeticException e) &#123;      【除数不能为0】</span><br><span class="line">    	System.out.println(e.getMessage());</span><br><span class="line">    &#125; catch (NullPointerException e) &#123;     【操作数组null地址异常】</span><br><span class="line">    	System.out.println(e.getMessage());</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 可以继续抛出异常</span><br><span class="line">    test(10, 0, null);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">【测试方法】</span><br><span class="line">public static void test(int num1, int num2, int[] arr) throws ArithmeticException, NullPointerException &#123;</span><br><span class="line">    &#x2F;&#x2F; 正常情况下，进行参数合法性判断</span><br><span class="line">    &#x2F;&#x2F; if()</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 抛出异常方式来处理当前的参数合法性判断</span><br><span class="line">    if (0 &#x3D;&#x3D; num2) &#123;</span><br><span class="line">    	&#x2F;&#x2F; 有可能会导致算术异常</span><br><span class="line">    	throw new ArithmeticException(&quot;算术异常&quot;);【如果此处抛出异常，后边不执行】</span><br><span class="line">    &#125;</span><br><span class="line">    if (null &#x3D;&#x3D; arr) &#123;</span><br><span class="line">    	&#x2F;&#x2F; 存在数组操作空指针异常</span><br><span class="line">    	throw new NullPointerException(&quot;数组空指针异常&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(num1 &#x2F; num2);</span><br><span class="line">    arr[0] &#x3D; 10;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-抛出和捕获的对比"><a href="#4-抛出和捕获的对比" class="headerlink" title="4. 抛出和捕获的对比"></a>4. 抛出和捕获的对比</h4><ul>
-<li><strong>捕获</strong>之后，<strong>代码可以正常运行</strong>，要保证处理之后的异常不会再导致其他问题。</li>
-<li><strong>抛出</strong>，可以让代码健壮性很强，到用户层面不可抛出，不友好</li>
-</ul>
-<p>用户名密码错误，不能采用捕获异常。应该通过以下方式处理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 捕获异常</span><br><span class="line">2. 通过异常处理 catch将错误抛出</span><br><span class="line">3. 给予用户的友好提示</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-RuntimeException"><a href="#5-RuntimeException" class="headerlink" title="5. RuntimeException"></a>5. RuntimeException</h4><p>运行时异常，在代码中如果出现，不需要代码中强制进行捕获或者抛出处理。JVM非检查</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ArrayIndexOutOfBoundException</span><br><span class="line">NullPointerException</span><br><span class="line">StringIndexOutOfBoundException</span><br><span class="line">ArithmeticException</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-自定义异常"><a href="#6-自定义异常" class="headerlink" title="6.  自定义异常"></a>6.  自定义异常</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class 自定义异常类名 extends Exception &#123;</span><br><span class="line">    &#x2F;&#x2F; No Fields Constructor【无参数构造方法】</span><br><span class="line">    &#x2F;&#x2F; String Field Constructor【带有String类型参数的构造方法】</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>自定义异常类名：必须Exception结尾！！！</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class NoGirlFriendException extends Exception &#123;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 无参数构造方法</span><br><span class="line">    public NoGirlFriendException() &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F; 带有String类型参数的构造方法</span><br><span class="line">    public NoGirlFriendException(String message) &#123;</span><br><span class="line">    	super(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">【测试】</span><br><span class="line">public static void main(String[] args) throws NoGirlFriendException &#123;</span><br><span class="line">    try &#123;</span><br><span class="line">    	buyOneFreeOne(false);</span><br><span class="line">    &#125; catch (NoGirlFriendException e) &#123;</span><br><span class="line">    	e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    buyOneFreeOne(true);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void buyOneFreeOne(boolean singleDog) throws NoGirlFriendException &#123;</span><br><span class="line">    if (singleDog) &#123;</span><br><span class="line">    	throw new NoGirlFriendException(&quot;两只黄鹂鸣翠柳，你还没有女朋友&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    System.out.println(&quot;买蜜雪冰城甜筒一个送一个&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/java_04_%E5%BC%82%E5%B8%B8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -999,7 +695,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -1124,235 +820,19 @@ ORDER BY id DESC;
 
       
         
-          
-            <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>对于一类事物的统称，对当前事物的一些描述，属性描述和行为描述</p>
+          <h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>对于一类事物的统称，对当前事物的一些描述，属性描述和行为描述</p>
 <p><strong>交通工具类</strong></p>
 <hr>
 <h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><p>独立，唯一，特殊的个体</p>
 <p><strong>汽车，轮船，飞机</strong></p>
 <hr>
-<h2 id="this关键字（调用本类的）"><a href="#this关键字（调用本类的）" class="headerlink" title="this关键字（调用本类的）"></a>this关键字（调用本类的）</h2><ol>
-<li>表示调用当前方法的<strong>类对象</strong></li>
-<li>当前构造方法中初始化的<strong>类对象</strong></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Dog类 </span><br><span class="line">	private String name;</span><br><span class="line"></span><br><span class="line">构造方法</span><br><span class="line">    public Dog(String name)&#123;</span><br><span class="line">        this.name &#x3D; name;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<hr>
-<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><p><strong>未赋值不能参与除赋值之外的其他运算。</strong></p>
-<img src="https://gitee.com/lwclick/blogImg/raw/master/img/零值.png" alt="零值" style="zoom:80%;" />
-
-<hr>
-<h2 id="GC机制"><a href="#GC机制" class="headerlink" title="GC机制"></a>GC机制</h2><ol>
-<li>在单位时间内，检查当前Java程序使用的内存中是否存在无主内存。</li>
-<li>标记无主内存，多次标记的情况下，会将无主内存释放，归还内存空间。</li>
-</ol>
-<img src="https://gitee.com/lwclick/blogImg/raw/master/img/图书管理员简述回收机制.png" alt="图书管理员简述回收机制" style="zoom:80%;" />
-
-<hr>
-<h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><h4 id="封装、继承、多态"><a href="#封装、继承、多态" class="headerlink" title="封装、继承、多态"></a>封装、继承、多态</h4><hr>
-<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">方法的封装（重复代码）</span><br><span class="line">工具类的封装（重复方法）</span><br><span class="line">框架的封装（重复类）</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="JavaBean规范的类封装过程"><a href="#JavaBean规范的类封装过程" class="headerlink" title="JavaBean规范的类封装过程"></a>JavaBean规范的类封装过程</h4><ol>
-<li>所有的成员变量全部私有化 ==&gt; private</li>
-<li>必须提供一个无参数构造方法</li>
-<li>使用private修饰的成员变量提供Setter Getter方法</li>
-</ol>
-<h4 id="匿名对象（不要操作成员变量）"><a href="#匿名对象（不要操作成员变量）" class="headerlink" title="匿名对象（不要操作成员变量）"></a>匿名对象（不要操作成员变量）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">new 构造方法（必要的参数）;</span><br></pre></td></tr></table></figure>
-
-<p>用途：</p>
-<ul>
-<li>使用匿名对象直接调用类内的成员方法</li>
-<li>匿名对象直接作为方法的参数</li>
-</ul>
-<hr>
-<h2 id="继承（extend）"><a href="#继承（extend）" class="headerlink" title="继承（extend）"></a>继承（extend）</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">class A extends B &#123;</span><br><span class="line">&#125;</span><br><span class="line">父类B是唯一的，java是单继承</span><br><span class="line">	继承之后，父类的无参构造方法先执行</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>子类继承父类之后，可以使用父类的<strong>非私有化成员</strong>变量和成员方法</li>
-<li>子类不能继承得到父类的私有化内容。</li>
-</ul>
-<h4 id="super关键字（调用父类的）"><a href="#super关键字（调用父类的）" class="headerlink" title="super关键字（调用父类的）"></a>super关键字（调用父类的）</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">super([参数]);</span><br><span class="line">super.变量</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://gitee.com/lwclick/blogImg/raw/master/img/%E7%BB%A7%E6%89%BF%E7%88%B6%E7%B1%BB%E5%92%8C%E5%AD%90%E7%B1%BB%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90%E5%9B%BE.png" alt="继承父类和子类内存分析图"></p>
-<ul>
-<li>如果没有显式调用父类的构造方法，Java编译器会<strong>默认调用无参</strong>父类<strong>构造方法</strong>使用</li>
-<li>根据数据类型选择对应方法</li>
-<li>super调用构造方法，必须在当前构造方法的<strong>第一行</strong></li>
-</ul>
-<h4 id="方法重载"><a href="#方法重载" class="headerlink" title="方法重载"></a>方法重载</h4><p>一个类中，名字相同，参数个数、类型不同的方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void eat()&#123;&#125;</span><br><span class="line"></span><br><span class="line">public void eat(String food)&#123;&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="方法重写"><a href="#方法重写" class="headerlink" title="方法重写"></a>方法重写</h4><p>父类的方法不适用于子类情况，子类可以重写父类的方法</p>
-<p><strong>返回值类型，方法名和形式参数列表</strong>和父类完全一致</p>
-<h4 id="强制子类重写方法（abstract）"><a href="#强制子类重写方法（abstract）" class="headerlink" title="强制子类重写方法（abstract）"></a>强制子类重写方法（abstract）</h4><ul>
-<li><p>abstract修饰的方法<strong>没有方法体</strong></p>
-</li>
-<li><p>abstract修饰的方法必须定义在<strong>abstract修饰的类内</strong>或者<strong>interface接口</strong>内</p>
-</li>
-<li><p>一个普通类<strong>继承</strong>了一个abstract类，<strong>必须实现</strong>在abstract类内的所有abstract方法</p>
-</li>
-<li><p>一个abstract类<strong>继承</strong>了另一个abstract类，<strong>选择实现</strong>其中的abstract方法</p>
-</li>
-<li><p>abstract修饰的类内<strong>允许</strong>普通方法</p>
-</li>
-<li><p>abstract类<strong>不能有</strong>自己的类对象</p>
-</li>
-</ul>
-<h4 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h4><ul>
-<li><p>修饰成员变量</p>
-<ul>
-<li>定义时必须初始化</li>
-<li><strong>赋值之后无法修改</strong></li>
-</ul>
-</li>
-<li><p>修饰成员方法</p>
-<ul>
-<li>不能被子类重写</li>
-</ul>
-</li>
-<li><p>修饰类</p>
-<ul>
-<li>没有子类，不能被继承</li>
-</ul>
-</li>
-</ul>
-<p><strong><em>abstract修饰的类不能被 final 修饰</em></strong></p>
-<hr>
-<h2 id="static关键字（通过类名调用）"><a href="#static关键字（通过类名调用）" class="headerlink" title="static关键字（通过类名调用）"></a>static关键字（通过类名调用）</h2><h3 id="一、修饰成员变量"><a href="#一、修饰成员变量" class="headerlink" title="一、修饰成员变量"></a>一、修饰成员变量</h3><h4 id="1-修饰成员变量的特征"><a href="#1-修饰成员变量的特征" class="headerlink" title="1. 修饰成员变量的特征"></a>1. 修饰成员变量的特征</h4><ul>
-<li>公共区域存放</li>
-</ul>
-<ol start="2">
-<li>都可以使用</li>
-<li>和对象无关</li>
-<li>一处修改，处处受到影响。</li>
-</ol>
-<h4 id="2-注意事项"><a href="#2-注意事项" class="headerlink" title="2. 注意事项"></a>2. 注意事项</h4><ul>
-<li>使用<strong>类名</strong>调用静态成员变量</li>
-<li>静态成员变量应该通过静态方法访问</li>
-</ul>
-<h4 id="3-静态成员变量和对象无关"><a href="#3-静态成员变量和对象无关" class="headerlink" title="3. 静态成员变量和对象无关"></a>3. 静态成员变量和对象无关</h4><ul>
-<li>内存角度<ul>
-<li>静态成员变量  —– 内存的数据区</li>
-<li>类对象 —- 内存的堆区</li>
-</ul>
-</li>
-<li>生命周期<ul>
-<li>静态成员变量   —-   从程序运行开始就已存在，随着(.class) 字节码文件的加载过程中，直接定义在内存的数据区   —-   从程序开始，到程序结束</li>
-<li>类对象   —-   是在代码的运行过程中，有可能被创建的  —-   从创建开始，而且随时有可能被JVM的<br>GC销毁</li>
-</ul>
-</li>
-</ul>
-<h3 id="二、修饰成员方法"><a href="#二、修饰成员方法" class="headerlink" title="二、修饰成员方法"></a>二、修饰成员方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public static 返回值类型 方法名(形式参数列表) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-注意事项"><a href="#1-注意事项" class="headerlink" title="1. 注意事项"></a>1. 注意事项</h4><ul>
-<li>使用<strong>静态方式</strong>调用，通过<strong>类名</strong>调用</li>
-<li>静态成员方法中<strong>不能</strong>使用<strong>非静态成员</strong>，可以使用<strong>其他静态成员</strong></li>
-<li>静态成员方法中不能使用<strong>this</strong>关键字</li>
-<li>静态成员方法中可以通过<strong>new</strong> 构造方法创建对象</li>
-</ul>
-<h4 id="2-特征"><a href="#2-特征" class="headerlink" title="2. 特征"></a>2. 特征</h4><ul>
-<li>静态成员方法是随着.class字节码文件的加载而直接定义在内存的【方法区】</li>
-<li>不能使用非静态成员，不能使用this关键字【没有对象】</li>
-<li>类内成员变量和成员方法都不可以使用，但是不影响使用外来数据</li>
-</ul>
-<h4 id="3-用途"><a href="#3-用途" class="headerlink" title="3. 用途"></a>3. 用途</h4><ul>
-<li>静态成员方法通常用于<strong>工具类的封装</strong>使用</li>
-</ul>
-<h3 id="三、类变量、类方法"><a href="#三、类变量、类方法" class="headerlink" title="三、类变量、类方法"></a>三、类变量、类方法</h3><ul>
-<li>类变量 ==&gt; 静态成员变量</li>
-<li>类方法 ==&gt; 静态成员方法</li>
-<li>类成员 ==&gt; 静态成员变量和静态成员方法</li>
-</ul>
-<p><strong>类方法可以使用当前类内的静态成员变量，但是不允许使用非静态成员变量</strong></p>
-<h3 id="四、静态代码块"><a href="#四、静态代码块" class="headerlink" title="四、静态代码块"></a>四、静态代码块</h3><h4 id="1-构造代码块"><a href="#1-构造代码块" class="headerlink" title="1. 构造代码块"></a>1. 构造代码块</h4><p>只要调用构造方法，一定会执行对应的构造代码块（初始化当前类的所有类对象）</p>
-<h4 id="2-静态代码块"><a href="#2-静态代码块" class="headerlink" title="2. 静态代码块"></a>2. 静态代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">static &#123;</span><br><span class="line">    &#x2F;&#x2F; 静态代码块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>只要类文件加载，静态代码块中所有内容全部执行，<strong>有且只执行一次</strong></p>
-<h6 id="特征："><a href="#特征：" class="headerlink" title="特征："></a>特征：</h6><ul>
-<li>不能使用this关键字，不能使用类内的非静态成员</li>
-<li>可以使用类内的其他静态成员</li>
-<li>定义的变量都是<strong>局部变量</strong></li>
-</ul>
-<h4 id="3-局部代码块"><a href="#3-局部代码块" class="headerlink" title="3. 局部代码块"></a>3. 局部代码块</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for () &#123;</span><br><span class="line">    &#123;</span><br><span class="line">    	int num</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>提高效率，解决内存，让JVM回收内存的效率提升。</p>
-<h4 id="4-面试题"><a href="#4-面试题" class="headerlink" title="4. 面试题"></a>4. 面试题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Demo3 &#123;</span><br><span class="line">    &#123;</span><br><span class="line">    	System.out.println(&quot;构造代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    static &#123;</span><br><span class="line">    	System.out.println(&quot;静态代码块&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public Demo3() &#123;</span><br><span class="line">    	System.out.println(&quot;构造方法&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">    	Demo3 demo1 &#x3D; new Demo3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>类加载      <strong>静态代码块</strong></li>
-<li>创建demo1，  <strong>构造代码块</strong>，  <strong>构造方法</strong></li>
-</ul>
-<hr>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">interface 接口名 &#123;</span><br><span class="line">    成员变量（缺省属性public static final）</span><br><span class="line">    成员方法（public abstract）</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">实现接口（implements）：</span><br><span class="line">	class 类名 implements 接口 &#123;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="2-总结"><a href="#2-总结" class="headerlink" title="2. 总结"></a>2. 总结</h4><ul>
-<li>一个普通类 <strong>实现</strong> 接口，需要实现所有缺省属性为<strong>public abstract</strong>的成员方法</li>
-<li>允许一个接口继承多个接口</li>
-<li><strong>接口中可以使用</strong> default <strong>关键字修饰方法，有方法体，不要求实现</strong></li>
-</ul>
-<hr>
-<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">父类的引用指向子类的对象</span><br><span class="line"></span><br><span class="line">接口的引用指向遵从接口的类对象</span><br></pre></td></tr></table></figure>
-
-<h4 id="1-作用"><a href="#1-作用" class="headerlink" title="1. 作用"></a>1. 作用</h4><ul>
-<li><p>拓展方法的参数类型</p>
-<ul>
-<li>方法参数为<strong>Animal</strong>类型，可以传入Animal类本身，也可以传入子类对象</li>
-<li>方法参数为USB<strong>接口</strong>类型，只要是直接或者间接遵从USB接口的类对象都可以作为方法的参数传入</li>
-</ul>
-</li>
-<li><p>拓宽方法的返回值范围</p>
-</li>
-<li><p>整合数据类型</p>
-</li>
-</ul>
-<h4 id="2-案例1"><a href="#2-案例1" class="headerlink" title="2. 案例1"></a>2. 案例1</h4><p><strong>接口：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 定义 usb 接口类</span><br><span class="line">interface USB &#123;</span><br><span class="line">	void connect();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>鼠标类 实现 接口：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2. 定义鼠标类，遵从usb接口</span><br><span class="line">class Mouse implements USB &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void connect() &#123;</span><br><span class="line">    	System.out.println(&quot;鼠标连接USB接口，控制光标&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>具体鼠标类 继承 鼠标类：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3. 罗技鼠标类，继承Mouse类</span><br><span class="line">class Logi extends Mouse &#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void connect() &#123;</span><br><span class="line">    	System.out.println(&quot;罗技 Master 2S&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>测试类：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">4. PC电脑类，使用USB接口</span><br><span class="line">class PC &#123;</span><br><span class="line">    public void usbConnect(USB usb) &#123;     【此处的参数】</span><br><span class="line">    	usb.connect();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Demo1 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        &#x2F;&#x2F; 电脑中有一个方法是使用USB接口连接USB设备</span><br><span class="line">        PC pc &#x3D; new PC();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 鼠标是USB设备</span><br><span class="line">        Mouse mouse &#x3D; new Mouse();</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 电脑需要通过USB接口连接USB设备，mouse鼠标就是USB设备</span><br><span class="line">        pc.usbConnect(mouse);</span><br><span class="line"></span><br><span class="line">        &#x2F;&#x2F; 传入一个Logi类对象</span><br><span class="line">        pc.usbConnect(new Logi());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="3-案例2"><a href="#3-案例2" class="headerlink" title="3. 案例2"></a>3. 案例2</h4><p><strong>animal类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Animal &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>Dog类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Dog extends Animal &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>panda类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">class Panda extends Animal &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>测试类</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public class Demo2 &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Animal animal &#x3D; new Animal();</span><br><span class="line">        Dog dog &#x3D; new Dog();</span><br><span class="line">        Tiger tiger &#x3D; new Tiger();</span><br><span class="line">       </span><br><span class="line">        &#x2F;&#x2F; 这里传入一个Animal类对象</span><br><span class="line">        feed(animal);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 这里可以传入Dog类对象，因为Dog类对象是Animal类的子类对象</span><br><span class="line">        feed(dog);</span><br><span class="line">        feed(panda);</span><br><span class="line">        </span><br><span class="line">        &#x2F;&#x2F; 数据类型强转</span><br><span class="line">        Dog dog2 &#x3D; (Dog) getAnimal();</span><br><span class="line">        System.out.println(dog2.getClass());</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static void feed(Animal animal) &#123;       【此处的参数】</span><br><span class="line">        &#x2F;&#x2F; 获取当前对象的完整包名.类名</span><br><span class="line">        System.out.println(animal.getClass() + &quot;来吃饭了！！！&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public static Animal getAnimal() &#123;  【此处的类型】</span><br><span class="line">        &#x2F;&#x2F; return new Animal();</span><br><span class="line">        return new Dog();				【可以使用子类返回】</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/java_03_%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1408,7 +888,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -1533,56 +1013,19 @@ ORDER BY id DESC;
 
       
         
-          
-            <h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a>定义数组</h2><pre><code>数据类型[] 数组名 = new 数据类型[容量];</code></pre><ol>
+          <h2 id="定义数组"><a href="#定义数组" class="headerlink" title="定义数组"></a>定义数组</h2><pre><code>数据类型[] 数组名 = new 数据类型[容量];</code></pre><ol>
 <li><strong>数据类型</strong>：确定数据类型之后，整个数组中保存的数据类型<strong><em>无法修改</em></strong></li>
 <li><strong>数组名</strong>：是一个【引用数据类型】</li>
 <li><strong>new</strong>:申请【XX】内存空间，并且<strong><em>清空整个内存空间中所有二进制位</em></strong>，所有的二进制位都是0</li>
 </ol>
-<h2 id="数组内存分析"><a href="#数组内存分析" class="headerlink" title="数组内存分析"></a>数组内存分析</h2><p><strong>堆</strong>中存放数据</p>
-<p><strong>栈</strong>中存放数组名 (也是一个【引用数据类型】的变量)</p>
-<img src="https://gitee.com/lwclick/blogImg/raw/master/img/数组地址转移问题.png" alt="数组地址转移问题" style="zoom:80%;" />
-
-
-<h4 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h4><p><strong>当前数组的属性length是要占用一定的数组空间的，属于数组中的内容，这就是为什么数组中占用的空间要比存储数据计算空间略大一些</strong></p>
-<h2 id="数组练习题"><a href="#数组练习题" class="headerlink" title="数组练习题"></a>数组练习题</h2><h4 id="找出数组中最小值的下标位置"><a href="#找出数组中最小值的下标位置" class="headerlink" title="找出数组中最小值的下标位置"></a>找出数组中最小值的下标位置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public int minIndexOf(int[] arr) &#123;</span><br><span class="line">    &#x2F;&#x2F; 假设最小值下标位置是下标为0的元素</span><br><span class="line">    int min &#x3D; 0;</span><br><span class="line">    for (int i &#x3D; 1; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (arr[min] &gt; arr[i]) &#123;</span><br><span class="line">        	min &#x3D; i;</span><br><span class="line">    	&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return min;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="找出数组中指定元素的最后一次出现的下标位置"><a href="#找出数组中指定元素的最后一次出现的下标位置" class="headerlink" title="找出数组中指定元素的最后一次出现的下标位置"></a>找出数组中指定元素的最后一次出现的下标位置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public int lastIndexOf(int[] arr, int num) &#123;</span><br><span class="line">    &#x2F;&#x2F; 假设找不到对应的数据</span><br><span class="line">    int index &#x3D; -1;</span><br><span class="line">    for (int i &#x3D; arr.length - 1; i &gt;&#x3D; 0; i--) &#123;   &#x2F;&#x2F; 最后一次，从后往前找</span><br><span class="line">        &#x2F;&#x2F; 找到对应元素，保存index，终止循环</span><br><span class="line">        if (num &#x3D;&#x3D; arr[i]) &#123;</span><br><span class="line">            index &#x3D; i;</span><br><span class="line">            break;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="找出指定元素在指定数组中所有下标位置"><a href="#找出指定元素在指定数组中所有下标位置" class="headerlink" title="找出指定元素在指定数组中所有下标位置"></a>找出指定元素在指定数组中所有下标位置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public int allIndexOf(int[] arr, int[] indexArr, int num) &#123;</span><br><span class="line">    &#x2F;&#x2F; 参数合法性判断</span><br><span class="line">    if (arr.length &gt; indexArr.length || num &gt; arr.length || num &lt; 0) &#123;</span><br><span class="line">        System.out.println(&quot;Input Parameter is Invalid!&quot;);</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;*</span><br><span class="line">    * 定义一个变量，</span><br><span class="line">    * 1. 计数器，记录找到的元素个数</span><br><span class="line">    * 2. 尾插法当中下一次存放元素的位置</span><br><span class="line">    *&#x2F;</span><br><span class="line">    int count &#x3D; 0;</span><br><span class="line">    for (int i &#x3D; 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (num &#x3D;&#x3D; arr[i]) &#123;          &#x2F;&#x2F; 找到了对应的元素，需要保存下标i</span><br><span class="line">            &#x2F;&#x2F; 保存到indexArr数组中</span><br><span class="line">            &#x2F;&#x2F; 需要使用尾插法！保存下一次存放数据的位置</span><br><span class="line">            indexArr[count] &#x3D; i;</span><br><span class="line">            count +&#x3D; 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="在指定位置插入指定元素"><a href="#在指定位置插入指定元素" class="headerlink" title="在指定位置插入指定元素"></a>在指定位置插入指定元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public static boolean add(int[] arr, int index, int insert) &#123;</span><br><span class="line">    &#x2F;&#x2F; 参数合法性判断</span><br><span class="line">    if (index &lt; 0 || index &gt; arr.length - 1) &#123;</span><br><span class="line">        System.out.println(&quot;Input Parameter is Invalid!&quot;);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; arr.length - 1; i &gt; index; i--) &#123;</span><br><span class="line">    	arr[i] &#x3D; arr[i - 1];</span><br><span class="line">    &#125;</span><br><span class="line">    arr[index] &#x3D; insert;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="删除数组中的指定下标的元素"><a href="#删除数组中的指定下标的元素" class="headerlink" title="删除数组中的指定下标的元素"></a>删除数组中的指定下标的元素</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public boolean remove(int[] arr, int index) &#123;</span><br><span class="line">    &#x2F;&#x2F; 参数合法性判断</span><br><span class="line">    if (index &lt; 0 || index &gt; arr.length - 1) &#123;</span><br><span class="line">        System.out.println(&quot;Input Parameter is Invalid&quot;);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;</span><br><span class="line">    for (int i &#x3D; index; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">    	arr[i] &#x3D; arr[i + 1];</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; 最后一位数据赋值为0，占位</span><br><span class="line">    arr[arr.length - 1] &#x3D; 0;</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">public static void selectSort(int[] arr)</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; 外层循环控制核心算法的循环次数</span><br><span class="line">    for (int i &#x3D; 0; i &lt; arr.length - 1; i++) &#123;</span><br><span class="line">        &#x2F;&#x2F; 从index位置开始找寻极值</span><br><span class="line">        int index &#x3D; i;</span><br><span class="line">        for (int j &#x3D; i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">            if (arr[index] &gt; arr[j]) &#123;</span><br><span class="line">                index &#x3D; j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (index !&#x3D; i) &#123;</span><br><span class="line">            int temp &#x3D; arr[i];</span><br><span class="line">            arr[i] &#x3D; arr[index];</span><br><span class="line">            arr[index] &#x3D; temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<h2 id="Arrays数组工具类"><a href="#Arrays数组工具类" class="headerlink" title="Arrays数组工具类"></a>Arrays数组工具类</h2><h4 id="快速排序算法"><a href="#快速排序算法" class="headerlink" title="快速排序算法"></a>快速排序算法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort(int[] arr);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="二分法查询，要求数组有序"><a href="#二分法查询，要求数组有序" class="headerlink" title="二分法查询，要求数组有序"></a>二分法查询，要求数组有序</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">binarySearch(int[] arr, int find);</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="把数组内容作出一个String类型字符串返回值"><a href="#把数组内容作出一个String类型字符串返回值" class="headerlink" title="把数组内容作出一个String类型字符串返回值"></a>把数组内容作出一个String类型字符串返回值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">toString(任何类型数组);</span><br></pre></td></tr></table></figure>
-
-
-          
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/java_02_%E6%95%B0%E7%BB%84/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1638,7 +1081,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -1763,40 +1206,22 @@ ORDER BY id DESC;
 
       
         
-          
-            <h2 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名(参数类型 参数名)&#123;</span><br><span class="line">    ...</span><br><span class="line">    方法体</span><br><span class="line">    ...</span><br><span class="line">    return 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h2 id="方法定义"><a href="#方法定义" class="headerlink" title="方法定义"></a>方法定义</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">修饰符 返回值类型 方法名(参数类型 参数名)&#123;</span><br><span class="line">    ...</span><br><span class="line">    方法体</span><br><span class="line">    ...</span><br><span class="line">    return 返回值;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
+<hr>
 <h2 id="方法三要素"><a href="#方法三要素" class="headerlink" title="方法三要素"></a>方法三要素</h2><ol>
 <li><strong>返回值</strong></li>
 <li><strong>方法名</strong></li>
 <li><strong>形式参数列表</strong>（可变参数，JDK1.5之后）</li>
 </ol>
-<h2 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(typeName... parameterName)</span><br></pre></td></tr></table></figure>
-
-<p>一个方法中只能指定一个可变参数，<strong>它必须是方法的最后一个参数</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">public class VarargsDemo &#123;</span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">        &#x2F;&#x2F; 调用可变参数的方法</span><br><span class="line">        printMax(34, 3, 3, 2, 56.5);</span><br><span class="line">        printMax(new double[]&#123;1, 2, 3&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    public static void printMax(double... numbers) &#123;     【可变参数】</span><br><span class="line">        if (numbers.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">            System.out.println(&quot;No argument passed&quot;);</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        double result &#x3D; numbers[0];</span><br><span class="line"> </span><br><span class="line">        for (int i &#x3D; 1; i &lt;  numbers.length; i++)&#123;</span><br><span class="line">            if (numbers[i] &gt;  result) &#123;</span><br><span class="line">                result &#x3D; numbers[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;The max value is &quot; + result);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="方法的封装过程"><a href="#方法的封装过程" class="headerlink" title="方法的封装过程"></a>方法的封装过程</h2><h4 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h4><p>干什么、 方法名、 参数列表、 返回值类型</p>
-<h4 id="注释完成每一步需要做的事情"><a href="#注释完成每一步需要做的事情" class="headerlink" title="注释完成每一步需要做的事情"></a>注释完成每一步需要做的事情</h4><h2 id="方法封装小技巧"><a href="#方法封装小技巧" class="headerlink" title="方法封装小技巧"></a>方法封装小技巧</h2><ol>
-<li>功能单一化！！！<br>考虑后期的复用性，可移植性，模块化…</li>
-<li>减少代码中return的使用，提高代码阅读性</li>
-<li>找出特定的情况优化代码，提高效率</li>
-</ol>
-<h2 id="String面试题"><a href="#String面试题" class="headerlink" title="String面试题"></a>String面试题</h2><pre><code>main(String[] args) {
-    String str1 = &quot;老干妈&quot;;
-    str1 += &quot;，蛋炒饭&quot;;
-    str1 += &quot;，酱牛肉&quot;;
-    str1 += &quot;，宫保鸡丁&quot;;
-    str1 += &quot;，大盘鸡&quot;;
-    str1 += &quot;，麻辣香锅&quot;;
-    System.out.println(&quot;请问这里有几个字符串&quot;);
-}</code></pre><p><strong>12个字符串</strong></p>
-
-          
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/java_01_%E6%96%B9%E6%B3%95/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1852,7 +1277,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -1977,8 +1402,7 @@ ORDER BY id DESC;
 
       
         
-          
-            <h2 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h2><p>日常学习java的笔记，如有错误请见谅。</p>
+          <h2 id="前述"><a href="#前述" class="headerlink" title="前述"></a>前述</h2><p>日常学习java的笔记，如有错误请见谅。</p>
 <h2 id="java特性"><a href="#java特性" class="headerlink" title="java特性"></a>java特性</h2><ol>
 <li>跨平台（JVM） <strong>Write Once Run AnyWhere</strong></li>
 <li>面向对象</li>
@@ -1988,6 +1412,7 @@ ORDER BY id DESC;
 <li>动态的</li>
 <li>解释型</li>
 </ol>
+<hr>
 <h2 id="JDK安装路径"><a href="#JDK安装路径" class="headerlink" title="JDK安装路径"></a>JDK安装路径</h2><ol>
 <li><strong>bin</strong> : binary 二进制目录，都是二进制可以执行文件（java.exe）</li>
 <li><strong>db</strong> : JDK自带的小型数据库</li>
@@ -1996,49 +1421,14 @@ ORDER BY id DESC;
 <li><strong>lib</strong> : 资源库目录，存在一些.jar文件 Jar包</li>
 <li><strong>src.zip</strong> : 源文件代码</li>
 </ol>
-<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><ol>
-<li><strong>JAVA_HOME</strong> : jdk安装目录</li>
-<li><strong>CLASS_PATH</strong> : <code>.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar</code></li>
-<li><strong>PATH</strong> : <code>;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</code></li>
-</ol>
-<h2 id="八大基本类型"><a href="#八大基本类型" class="headerlink" title="八大基本类型"></a>八大基本类型</h2><ol>
-<li><strong>整型</strong> ： byte(1)、 short(2)、 int(4)、 long(8)</li>
-<li><strong>浮点型</strong> ： float(4)、 double(8)</li>
-<li><strong>布尔类型</strong> ： boolean(1)</li>
-<li><strong>字符型</strong> ： char(2)</li>
-</ol>
-<h4 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h4><ol>
-<li>声明float类型时，后面加 <strong>F</strong></li>
-<li>声明long类型时，后面加 <strong>L</strong></li>
-<li>字符串数据库类型(String)，<strong>“ ”</strong>内所有内容都是字符串本身，并且是一个常量，不可以修改</li>
-</ol>
-<h4 id="引用数据类型"><a href="#引用数据类型" class="headerlink" title="引用数据类型"></a>引用数据类型</h4><ol>
-<li>字符串</li>
-<li>数组</li>
-<li>对象</li>
-</ol>
-<h2 id="从键盘获得用户输入"><a href="#从键盘获得用户输入" class="headerlink" title="从键盘获得用户输入"></a>从键盘获得用户输入</h2><ol>
-<li><p>导入包</p>
-<p> <code>import java.util.Scanner;</code></p>
-</li>
-<li><p>获取Scanner的变量, 扫描器的一个变量</p>
-<p> <code>Scanner sc = new Scanner(System.in);</code></p>
-</li>
-<li><p>使用Scanner其中的方法</p>
-<p> 获取int类型数据: <code>sc.nextInt(); num = sc.nextInt()</code></p>
-<p> 获取double类型数据: <code>sc.nextDouble();</code></p>
-<p> 获取String类型字符串数据: <code>sc.next(); sc.nextLine();</code></p>
-<p> 获取一个char类型字符数据: <code>sc.next().charAt(0); sc.nextLine().charAt(0);</code></p>
-</li>
-</ol>
-<h2 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h2><p><strong>存在于代码块中的变量</strong></p>
-<h2 id="三目运算符"><a href="#三目运算符" class="headerlink" title="三目运算符"></a>三目运算符</h2><p><strong>条件判断 ? true处理方式 ： false处理方式;</strong></p>
-<h2 id="常用ASCII码"><a href="#常用ASCII码" class="headerlink" title="常用ASCII码"></a>常用ASCII码</h2><p><strong>A ：</strong>65</p>
-<p><strong>a :</strong>97</p>
-<p><strong>0 :</strong>48</p>
-<p><strong>空格 :</strong>32</p>
-
-          
+<hr>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/04/14/java_00_java%E5%85%A5%E9%97%A8/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2094,7 +1484,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
@@ -2292,7 +1682,7 @@ ORDER BY id DESC;
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LwClick">
+      <meta itemprop="name" content="绝对领域">
     </span>
 
     
